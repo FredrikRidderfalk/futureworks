@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Fonts -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
     <link
@@ -27,11 +31,26 @@
   </head>
   <body>
     <nav class="container__navbar">
-      <p>Navbar</p>
+      <div class="container__navbar__content">
+        <div class="container__logo">
+          <img src="assets/futureworks.png" class="logo" alt="#" />
+        </div>
+        <div class="container__nav-links">
+          <ul>
+            <li><a href="#">Beats</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div class="container__mute-btn">
+          <span class="material-icons"> volume_off </span>
+        </div>
+      </div>
     </nav>
 
     <main>
-      <div class="container__hero">
+      <section class="container__hero">
         <div class="container__hero__content">
           <div class="container__hero-text__left">
             <h1>Future</h1>
@@ -48,13 +67,35 @@
             <h1>Works</h1>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="container__works">
+        <div class="container__works__content">
+          <article>Card 1</article>
+          <article>Card 2</article>
+          <article>Card 3</article>
+        </div>
+      </section>
+
+      <section class="container__song-services">
+        <div class="container__song-services__content">
+          <div class="container__text"><h2>Complete Song Services</h2></div>
+          <div class="container__img">Insert image here</div>
+        </div>
+      </section>
+
+      <section class="container__project-launching">
+        <div class="container__project-launching__content">
+          <div class="container__text"><h2>Project Launching</h2></div>
+          <div class="container__img">Insert image here</div>
+        </div>
+      </section>
+
+      <canvas id="canvasMolecularImage"></canvas>
     </main>
 
-    <footer>
-      <p>Footer</p>
+    <footer class="container__footer">
+      <div>Footer yay</div>
     </footer>
-
-    <canvas id="canvasMolecularImage"></canvas>
   </body>
 </html>
