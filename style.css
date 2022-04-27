@@ -7,7 +7,7 @@
 body {
     font-family: Helvetica, sans-serif;
     /* overflow: hidden; */
-    background-color: #fff;
+    background-color: #000;
 }
 
 h1 {
@@ -27,6 +27,11 @@ p {
     height: 100%;
     border: 1px solid magenta;
 }
+
+/* Navbar */
+/* .container__navbar {
+    position: fixed;
+} */
 
 /* Main */
 .container__hero {
@@ -50,3 +55,16 @@ p {
         align-items: center;
     }
 }
+
+/* Scrollbar styling */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d"); // Our canvas that contains a myriad of bui
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-document.querySelector("body").style.backgroundColor = "#000";
+// document.querySelector("body").style.backgroundColor = "#000";
 
 let particlesArray = [];
 let adjustX = 200; // use this to move the text around
@@ -18,7 +18,7 @@ const mouse = {
   // we need this object to make our mouse cursor coordinates available all over our application, since event.x and event.y will only be available inside an eventListener.
   x: undefined,
   y: undefined,
-  radius: 100, // Radius for interaction zone surrounding the mouse cursor
+  radius: 50, // Radius for interaction zone surrounding the mouse cursor
 };
 
 window.addEventListener("mousemove", function (event) {
