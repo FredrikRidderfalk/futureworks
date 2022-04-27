@@ -10,7 +10,7 @@ canvas.height = window.innerHeight;
 document.querySelector("body").style.backgroundColor = "#000";
 
 let particlesArray = [];
-let adjustX = 30; // use this to move the text around
+let adjustX = 200; // use this to move the text around
 let adjustY = 15; // use this to move the text around
 
 // ------ HANDLE MOUSE ------
@@ -41,10 +41,10 @@ function drawImage() {
       this.density = Math.random() * 10 + 2;
     }
     draw() {
-      //   ctx.lineWidth = 3;
-      ctx.strokeStyle = this.color;
-      // ctx.fillRect(this.x, this.y, this.size * 2.75, this.size * 2.75);
-      ctx.strokeRect(this.x, this.y, this.size * 2.75, this.size * 2.75);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
     }
     update() {
       // This is where we calculate particle movement and cursor interactions
@@ -66,7 +66,7 @@ function drawImage() {
       if (distance < mouse.radius + this.size) {
         this.x -= directionX; // Repulsion effect
         this.y -= directionY; // Repulsion effect
-        this.size = 3;
+        this.size = 1;
       } else {
         if (this.x !== this.baseX) {
           // Retraction effect
