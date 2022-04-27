@@ -16,6 +16,10 @@ h1 {
     letter-spacing: 3.5px;
 }
 
+h1, h2, h3 {
+    line-height: 1.05;
+}
+
 p {
     font-size: 1rem;
 }
@@ -97,6 +101,7 @@ p {
 
 .container__hero-text__left {
     background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
@@ -104,6 +109,7 @@ p {
 
 .container__hero-text__right {
     background: -webkit-linear-gradient(150deg, rgba(219,252,255,1) 0%, rgba(154,225,255,1) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
@@ -149,13 +155,61 @@ p {
     }
     .container__3d-logo {
         width: 500px;
-        height: 100vh;
+        height: 80vh;
         margin-inline: -120px;
     }
 
     /* Works */
+    .container__works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     .container__works__content {
         display: flex;
+        justify-content: space-around;
+        max-width: 1440px;
+        border: 1px solid yellow;
+    }
+
+    .works__card {
+        width: 400px;
+        height: 300px;
+        padding: 1rem;
+    }
+
+    .works__card h3 {
+        font-size: 3rem;
+    }
+
+    .works__card p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .container__project-btn {
+        margin: 0 auto;
+        border: 1px solid red;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-btn {
+        border: none;
+        font-size: 1rem;
+        padding: 10px 50px;
+        margin-top: 3rem;
+        background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 100%);
+    }
+
+    .project-btn:hover {
+        border: none;
+        font-size: 1rem;
+        padding: 10px 50px;
+        background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 50%);
+        cursor: pointer;
     }
 
     /* Complete Song Services */
@@ -182,3 +236,37 @@ body::-webkit-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+  /* Animated gradient border */
+  .gradient-border {
+    --borderWidth: 6px;
+    background: #1D1F20;
+    position: relative;
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    /* border-radius: calc(2 * var(--borderWidth)); */
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
