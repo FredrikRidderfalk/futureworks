@@ -11,6 +11,14 @@ body {
     color: #fafafa;
 }
 
+main {
+    /* scroll-snap-type: y mandatory; */
+    /* scroll-snap-stop: always; */
+    /* overflow-y: scroll; */
+    /* overflow: scroll; */
+    /* position: relative; */
+}
+
 h1 {
     font-size: 8rem;
     letter-spacing: 3.5px;
@@ -46,11 +54,12 @@ button {
 
 /* Navbar */
 .container__navbar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .container__navbar__content {
@@ -66,9 +75,9 @@ button {
 
 .container__logo {
     height: 60px;
-    width: 60px;
     display: block;
     border: 1px solid greenyellow;
+    padding-inline: 5rem;
 }
 
 .logo {
@@ -97,7 +106,7 @@ button {
 
 /* Hero */
 .container__hero {
-    background-image: url("assets/angelo.jpg");
+    background-image: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(0,0,0,1) 100%), url("assets/angelo.jpg");
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,6 +131,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
+    margin-right: 9rem;
 }
 
 .container__hero-text__right {
@@ -131,6 +141,7 @@ button {
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
     pointer-events: none;
+    margin-left: 7rem;
 }
 
 /* Works */
@@ -179,18 +190,10 @@ button {
     text-decoration: none;
     color: rgba(154,225,255,1);
     font-weight: 700;
-    /* background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     transition: color 0.5s ease-in-out;
 }
 
 .bangers:hover {
-    /* background: -webkit-linear-gradient(150deg, rgba(92,199,255,1) 0%, rgba(154,225,255,1) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     color: rgb(255, 115, 115);
 }
 
@@ -237,12 +240,15 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid yellow;
+        border: 1px solid red;
+        position: relative;
     }
     .container__3d-logo {
-        width: 500px;
+        /* width: 500px; */
+        width: 100%;
         height: 100vh;
         margin-inline: -120px;
+        position: absolute;
     }
 
     /* Works */
@@ -286,11 +292,11 @@ button {
         position: relative;
         appearance: none;
         background: rgb(6, 155, 255);
-        padding: 1em 2em;
+        padding: 1rem 4rem;
         border: none;
-        color: #fafafa;
+        color: #000;
         cursor: pointer;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 
     .primary-btn span {
@@ -308,14 +314,30 @@ button {
 		top: var(--y);
 		width: var(--size);
 		height: var(--size);
-		background: radial-gradient(circle closest-side, rgb(92,199,255,1), transparent);
+		background: radial-gradient(circle closest-side, #5cc7ff, transparent);
 		transform: translate(-50%, -50%);
-		transition: width .2s ease, height .2s ease;
+		transition: width .2s ease-in-out, height .2s ease-in-out;
     }
 
     .primary-btn:hover::before {
 		--size: 400px;
 	}
+
+    /* Secundary button */
+    .contact-btn {
+        --x: 50%;
+        --y: 50%;
+        
+        position: relative;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        color: #fafafa;
+        cursor: pointer;
+        border-radius: 100px;
+        border: 2px solid transparent;
+        font-size: 1rem;
+        background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+    }
 
     /* Complete Song Services */
     .container__song-services {
@@ -351,6 +373,7 @@ button {
         height: 700px;
         border: 2px solid green;
         padding-inline: 20px;
+        overflow: hidden;
     }
 
     .container__img img {
