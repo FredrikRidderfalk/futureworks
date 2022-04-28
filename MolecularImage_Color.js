@@ -1,5 +1,5 @@
-// ----- MOLECULAR TEXT -----
-// Here we transform our molecular text into bubbles *blub blub*
+// ----- MOLECULAR Image -----
+// Here we transform our image into tiny, molecular pieces that can be manipulated
 
 // ------ SETUP ------
 const canvas = document.querySelector("#canvasMolecularImage"); // Our canvas element
@@ -10,8 +10,8 @@ canvas.height = window.innerHeight;
 // document.querySelector("body").style.backgroundColor = "#000";
 
 let particlesArray = [];
-let adjustX = 160; // use this to move the text around
-let adjustY = 0; // use this to move the text around
+let adjustX = 160; // use this to move the image around
+let adjustY = 0; // use this to move the image around
 
 // ------ HANDLE MOUSE ------
 const mouse = {
