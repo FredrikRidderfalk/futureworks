@@ -123,7 +123,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
-    margin-right: 9rem;
+    margin-right: 18rem;
 }
 
 .container__hero-text__right {
@@ -133,7 +133,7 @@ button {
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
     pointer-events: none;
-    margin-left: 7rem;
+    /* margin-left: 5rem; */
 }
 
 /* Works */
