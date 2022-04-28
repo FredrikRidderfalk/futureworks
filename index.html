@@ -17,11 +17,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <script src="script.js" defer></script>
     <!-- Filter effects -->
     <!-- <script src="MolecularImage_Squares.js" defer></script> -->
@@ -138,18 +142,31 @@
         </div>
       </section>
 
-      <section>
-        <div>
+      <section class="container__about">
+        <div class="container__about__content">
           <h2>DeadNote</h2>
           <p>
             Nick is a producer, DJ and mixing engineer based in Gothenburg,
             Sweden with several years of experience both in the studio and live.
             Working under the aliases DeadNote and Zeitghost, founding member of
-            Bangers & Mash Sound System, and Frequency dnb member, he is
-            dedicated to pushing underground music and sound system culture.
+            <a
+              href="https://www.facebook.com/bangersandmash.gbg/?ref=page_internal"
+              class="bangers"
+              target="_blank"
+              >Bangers & Mash Sound System</a
+            >, and Frequency dnb member, he is dedicated to pushing underground
+            music and sound system culture.
           </p>
+          <div class="container__socials">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitch-line"></i></a>
+            <a href="#"><i class="ri-soundcloud-line"></i></a>
+            <a href="#"><i class="ri-facebook-line"></i></a>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+          </div>
         </div>
       </section>
+
       <canvas id="canvasMolecularImage"></canvas>
     </main>
 

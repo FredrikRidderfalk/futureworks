@@ -138,13 +138,65 @@ p {
     height: 100vh;
 }
 
+/* About */
+.container__about {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border: 1px solid cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 1;
+}
+
+.container__about__content {
+    width: 45%;
+    max-width: 1440px;
+    margin-left: 6rem;
+}
+
+.container__about__content p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.bangers {
+    text-decoration: none;
+    color: rgba(92,199,255,1);
+    font-weight: 700;
+    /* background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    transition: all 0.5s ease-in-out;
+}
+
+.bangers:hover {
+    /* background: -webkit-linear-gradient(150deg, rgba(92,199,255,1) 0%, rgba(154,225,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: rgb(255, 92, 92);
+}
+
+.container__socials {
+    margin-top: 3rem;
+}
+
+.container__socials a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
 /* Footer */
-.container__footer {
+/* .container__footer {
     margin-top: 100vh;
     color: #fafafa;
     width: 100%;
     height: fit-content;
-}
+} */
 
 /* Media queries */
 
