@@ -10,15 +10,15 @@ canvas.height = window.innerHeight;
 // document.querySelector("body").style.backgroundColor = "#000";
 
 let particlesArray = [];
-let adjustX = 200; // use this to move the text around
-let adjustY = 15; // use this to move the text around
+let adjustX = 160; // use this to move the text around
+let adjustY = 0; // use this to move the text around
 
 // ------ HANDLE MOUSE ------
 const mouse = {
   // we need this object to make our mouse cursor coordinates available all over our application, since event.x and event.y will only be available inside an eventListener.
   x: undefined,
   y: undefined,
-  radius: 50, // Radius for interaction zone surrounding the mouse cursor
+  radius: 200, // Radius for interaction zone surrounding the mouse cursor
 };
 
 window.addEventListener("mousemove", function (event) {
@@ -97,7 +97,7 @@ function drawImage() {
             data.data[y * 4 * data.width + x * 4 + 1]
           }, ${data.data[y * 4 * data.width + x * 4 + 2]})`;
           particlesArray.push(
-            new Particle(positionX * 4, positionY * 4, color)
+            new Particle(positionX * 5, positionY * 5, color)
           );
         }
       }
@@ -108,7 +108,7 @@ function drawImage() {
   // ------ ANIMATE FUNCTION ------
   function animate() {
     requestAnimationFrame(animate);
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
     ctx.fillRect(0, 0, innerWidth, innerHeight);
 
     for (let i = 0; i < particlesArray.length; i++) {

@@ -16,6 +16,10 @@ h1 {
     letter-spacing: 3.5px;
 }
 
+h2 {
+    font-size: 5rem;
+}
+
 h1, h2, h3 {
     line-height: 1.05;
 }
@@ -233,10 +237,6 @@ p {
         text-align: end;
     }
 
-    .container__song-services__content .container__text h2 {
-        font-size: 4rem;
-    }
-
     .container__text {
         width: 50%;
         padding-inline: 20px;
@@ -281,9 +281,6 @@ p {
         text-align: start;
     }
 
-    .container__project-launching__content .container__text h2 {
-        font-size: 4rem;
-    }
 }
 
 /* Scrollbar styling */
