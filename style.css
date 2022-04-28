@@ -133,6 +133,7 @@ button {
     -webkit-text-fill-color: transparent;
     border: 1px solid salmon;
     pointer-events: none;
+    margin-right: 1rem;
     /* margin-left: 5rem; */
 }
 
