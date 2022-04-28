@@ -126,7 +126,7 @@ function drawImage() {
 }
 
 const png = new Image();
-png.src = "assets/deadnote-removebg.png";
+png.src = "assets/deadnote-chord.png";
 
 window.addEventListener("load", (event) => {
   ctx.drawImage(png, 0, 0);

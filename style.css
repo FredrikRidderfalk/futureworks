@@ -61,12 +61,16 @@ p {
 .container__logo {
     height: 60px;
     width: 60px;
+    display: block;
+    border: 1px solid greenyellow;
 }
 
 .logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    border: 1px solid red;
 }
 
 .container__nav-links ul {
@@ -76,16 +80,18 @@ p {
 
 .container__nav-links li {
     padding-inline: 2rem;
+    border: 1px solid red;
 }
 
 .container__nav-links li a {
     color: #fafafa;
     text-decoration: none;
+    border: 1px solid greenyellow;
 }
 
 /* Hero */
 .container__hero {
-    background-image: url("assets/angelo-abear-knTKij60p3g-unsplash.jpg");
+    background-image: url("assets/angelo.jpg");
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,13 +170,13 @@ p {
 
 .bangers {
     text-decoration: none;
-    color: rgba(92,199,255,1);
+    color: rgba(154,225,255,1);
     font-weight: 700;
     /* background: -webkit-linear-gradient(150deg, rgba(154,225,255,1) 0%, rgba(92,199,255,1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    transition: all 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
 .bangers:hover {
@@ -178,25 +184,37 @@ p {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    color: rgb(255, 92, 92);
+    color: rgb(255, 115, 115);
 }
 
 .container__socials {
     margin-top: 3rem;
+    border: 1px solid yellow;
+    height: fit-content;
+    display: flex;
 }
 
 .container__socials a {
     text-decoration: none;
-    color: #fafafa;
+    border: 1px solid red;
+    width: fit-content;
+    display: block;
+    margin-inline: 0.5rem;
 }
 
-/* Footer */
-/* .container__footer {
-    margin-top: 100vh;
-    color: #fafafa;
-    width: 100%;
-    height: fit-content;
-} */
+.container__socials i {
+    text-decoration: none;
+    color: rgba(154,225,255,1);
+    display: block;
+    border: 1px solid cyan;
+    font-size: 3rem;
+    transition: color 0.5s ease-in-out;
+    padding: 5px; /* for mobile, increasing the target area  */
+}
+
+.container__socials i:hover {
+    color: rgb(255, 115, 115);
+}
 
 /* Media queries */
 
@@ -384,5 +402,17 @@ body::-webkit-scrollbar {
           background-position: 0% 50%;
       }
   }
-
-  /* Animated work cards */
+  
+  /* Animated img */
+  .speaker-ball {
+      animation: animatedimg 150s linear infinite;
+    }
+    
+    @keyframes animatedimg {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
