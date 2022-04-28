@@ -35,21 +35,79 @@ gsap.from(".container__hero-text__right", {
   ease: "expo.out",
 });
 
-gsap.from(".header--link", {
+gsap.from(".works__card h3", {
+  scrollTrigger: {
+    trigger: ".works__card",
+    // scrub: 1,
+    // markers: true,
+    start: "top bottom", // [trigger] [scroller] positions
+  },
   duration: 2,
+  x: "-5%",
   opacity: 0,
-  stagger: 0.2,
+  stagger: 0.1,
   ease: "expo.out",
 });
 
-gsap.from(".container__about-part", {
+gsap.from(".works__card p", {
   scrollTrigger: {
-    trigger: ".container__about-part",
-    scrub: 1,
+    trigger: ".works__card",
+    // scrub: 1,
+    start: "top bottom",
+  },
+  duration: 1,
+  x: "-5%",
+  opacity: 0,
+  stagger: 0.1,
+  ease: "expo.out",
+});
+
+gsap.from(".song-services", {
+  scrollTrigger: {
+    trigger: ".song-services",
+    scrub: 1, // makes it animate the next time around again
     start: "center bottom",
   },
-  duration: 2,
-  y: "-100%",
+  duration: 1,
+  x: "-5%",
+  opacity: 0,
+  stagger: 0.1,
+  ease: "expo.out",
+});
+
+gsap.from(".project-launching", {
+  scrollTrigger: {
+    trigger: ".project-launching",
+    scrub: 1, // makes it animate the next time around again
+    start: "center bottom",
+  },
+  duration: 1,
+  x: "5%",
+  opacity: 0,
+  stagger: 0.1,
+  ease: "expo.out",
+});
+
+gsap.from(".about__animation", {
+  scrollTrigger: {
+    trigger: ".container__about__content",
+    scrub: 1, // makes it animate the next time around again
+    start: "top bottom",
+  },
+  duration: 3,
+  x: "-10%",
+  opacity: 0,
+  stagger: 0.1,
+  ease: "expo.out",
+});
+
+gsap.from("#canvasMolecularImage", {
+  scrollTrigger: {
+    trigger: ".container__about__content",
+    scrub: 1, // makes it animate the next time around again
+    start: "top bottom",
+  },
+  x: "10%",
   opacity: 0,
   stagger: 0.1,
   ease: "expo.out",
@@ -68,3 +126,17 @@ gsap.from(".container__about-part", {
 //     rotation: 0,
 //   }
 // );
+
+// const timeline = gsap.timeline({ defaults: { duration: 1 } });
+// timeline
+//   .from(".our-logo", { opacity: 0, ease: "expo.out" })
+//   .from(".our-logo", { opacity: 0, ease: "expo.out" })
+//   .from(".our-logo", { opacity: 0, ease: "expo.out" })
+//   .from(".our-logo", { opacity: 0, ease: "expo.out" });
+
+// const button = document.querySelector(".button");
+
+// button.addEventListener("click", () => {
+//   timeline.timeScale(3);
+//   timeline.reverse();
+// });
