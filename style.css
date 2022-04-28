@@ -11,14 +11,6 @@ body {
     color: #fafafa;
 }
 
-main {
-    /* scroll-snap-type: y mandatory; */
-    /* scroll-snap-stop: always; */
-    /* overflow-y: scroll; */
-    /* overflow: scroll; */
-    /* position: relative; */
-}
-
 h1 {
     font-size: 8rem;
     letter-spacing: 3.5px;
@@ -468,3 +460,39 @@ body::-webkit-scrollbar {
             transform: rotate(360deg);
         }
     }
+
+    /* Preloader */
+.preloader {
+    background-image: radial-gradient(circle, rgba(255,255,255,0) 10%, rgba(0,0,0,1) 80%), url("assets/angelo.jpg");
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.preloader__logo {
+    height: 300px;
+    animation: animatedlogo 30s linear infinite;
+}
+
+@keyframes animatedlogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader-finished {
+    opacity: 0;
+    pointer-events: none;
+}

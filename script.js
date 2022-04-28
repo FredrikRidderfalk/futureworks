@@ -13,3 +13,8 @@ document.querySelector(".contact-btn").onmousemove = (e) => {
   e.target.style.setProperty("--x", `${x}px`);
   e.target.style.setProperty("--y", `${y}px`);
 };
+
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+  preloader.classList.add("preloader-finished");
+});
