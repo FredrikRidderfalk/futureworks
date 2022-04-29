@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Space Grotesk', sans-serif;
     /* overflow: hidden; */
@@ -12,12 +16,12 @@ body {
 }
 
 h1 {
-    font-size: 8rem;
-    letter-spacing: 3.5px;
+    font-size: 5rem;
+    letter-spacing: 1.5px;
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 h1, h2, h3 {
@@ -223,57 +227,6 @@ button {
     color: rgb(255, 115, 115);
 }
 
-/* Media queries */
-
-@media (min-width: 1050px) {
-
-    /* Hero */
-    .container__hero__content {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid red;
-        position: relative;
-    }
-    .container__3d-logo {
-        /* width: 500px; */
-        width: 100%;
-        height: 100vh;
-        margin-inline: -120px;
-        position: absolute;
-    }
-
-    /* Works */
-    .container__works {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .container__works__content {
-        display: flex;
-        max-width: 1440px;
-        border: 1px solid yellow;
-    }
-
-    .works__card {
-        width: 400px;
-        height: 300px;
-        margin-inline: 1rem;
-        padding: 1rem;
-    }
-
-    .works__card h3 {
-        font-size: 3rem;
-    }
-
-    .works__card p {
-        font-size: 1rem;
-        margin-top: 1rem;
-    }
-
     /* Primary button */
     .container__primary-btn {
         margin-top: 3rem;
@@ -332,6 +285,66 @@ button {
         background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
     }
 
+/* Media queries */
+
+@media (min-width: 1050px) {
+
+    h1 {
+        font-size: 7rem;
+        letter-spacing: 2.5px;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    /* Hero */
+    .container__hero__content {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red;
+        position: relative;
+    }
+    .container__3d-logo {
+        /* width: 500px; */
+        width: 100%;
+        height: 100vh;
+        margin-inline: -120px;
+        position: absolute;
+    }
+
+    /* Works */
+    .container__works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container__works__content {
+        display: flex;
+        max-width: 1440px;
+        border: 1px solid yellow;
+    }
+
+    .works__card {
+        width: 300px;
+        height: 300px;
+        margin-inline: 1rem;
+        padding: 1rem;
+    }
+
+    .works__card h3 {
+        font-size: 3rem;
+    }
+
+    .works__card p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
     /* Complete Song Services */
     .container__song-services {
         display: flex;
@@ -363,7 +376,7 @@ button {
 
     .container__img {
         width: 50%;
-        height: 700px;
+        height: 500px;
         border: 2px solid green;
         padding-inline: 20px;
         overflow: hidden;
@@ -394,6 +407,23 @@ button {
 
     .container__project-launching__content .container__text {
         text-align: start;
+    }
+
+}
+
+@media (min-width: 1300px) {
+
+    h1 {
+        font-size: 8rem;
+        letter-spacing: 3.5px;
+    }
+
+    .works__card {
+        width: 400px;
+    }
+    
+    .container__img {
+        height: 700px;
     }
 
 }
@@ -479,9 +509,20 @@ body::-webkit-scrollbar {
     transition: opacity 0.5s ease;
 }
 
+
 .preloader__logo {
-    height: 300px;
+    height: 150px;
     animation: animatedlogo 30s linear infinite;
+}
+
+@media (min-width: 1050px) {
+
+    /* Preloader */
+    .preloader__logo {
+        height: 300px;
+        animation: animatedlogo 30s linear infinite;
+    }
+
 }
 
 @keyframes animatedlogo {

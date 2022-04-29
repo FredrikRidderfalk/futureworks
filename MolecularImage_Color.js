@@ -10,7 +10,7 @@ canvas.height = window.innerHeight;
 // document.querySelector("body").style.backgroundColor = "#000";
 
 let particlesArray = [];
-let adjustX = 160; // use this to move the image around
+let adjustX = canvas.width / 10 + 20; // use this to move the image around. Before it was hardcoded to 160
 let adjustY = 0; // use this to move the image around
 
 // ------ HANDLE MOUSE ------
@@ -18,7 +18,7 @@ const mouse = {
   // we need this object to make our mouse cursor coordinates available all over our application, since event.x and event.y will only be available inside an eventListener.
   x: undefined,
   y: undefined,
-  radius: 200, // Radius for interaction zone surrounding the mouse cursor
+  radius: 180, // Radius for interaction zone surrounding the mouse cursor
 };
 
 window.addEventListener("mousemove", function (event) {
