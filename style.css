@@ -348,15 +348,17 @@ button {
 .container__downloads a {
     text-decoration: none;
     width: fit-content;
+    height: fit-content;
     display: block;
     margin-inline: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .container__downloads i {
     text-decoration: none;
     color: rgba(154,225,255,1);
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: color 0.2s ease-in-out;
     padding: 0 2px; /* for mobile, increasing the target area  */
 }
