@@ -108,7 +108,7 @@ gsap.from("#canvasMolecularImage", {
     start: "top bottom",
   },
   x: "10%",
-  opacity: 0,
+  // opacity: 0,
   stagger: 0.1,
   ease: "expo.out",
 });
