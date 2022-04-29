@@ -1,3 +1,16 @@
+// const exploreBtn = document.querySelector(".contact-btn__mobile");
+
+// exploreBtn.addEventListener("click", () => {
+//   const mobileNav = document.querySelector(".container__navbar__mobile");
+//   open = false;
+//   if (!open) {
+//     open = true;
+//     mobileNav.classList.add("navbar-open");
+//   } else {
+//     mobileNav.classList.remove("navbar-open");
+//   }
+// });
+
 document.querySelector(".primary-btn").onmousemove = (e) => {
   const x = e.pageX - e.target.offsetLeft;
   const y = e.pageY - e.target.offsetTop;
