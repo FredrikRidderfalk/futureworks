@@ -179,6 +179,44 @@ button {
     margin-top: 1rem;
 }
 
+/* Portfolio */
+.container__portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__portfolio__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+}
+
+.portfolio__card {
+    width: 300px;
+    height: 250px;
+    margin-inline: 1rem;
+    padding: 1rem;
+}
+
+.portfolio__card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.portfolio__card h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.portfolio__card p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
     /* Complete Song Services */
     .container__song-services {
         width: 100%;
@@ -269,7 +307,7 @@ button {
     text-decoration: none;
     color: rgba(154,225,255,1);
     font-weight: 700;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 .bangers:hover {
@@ -294,12 +332,41 @@ button {
     color: rgba(154,225,255,1);
     display: block;
     font-size: 3rem;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.2s ease-in-out;
     padding: 5px; /* for mobile, increasing the target area  */
 }
 
 .container__socials i:hover {
     color: rgb(255, 115, 115);
+}
+
+.container__downloads {
+    /* height: fit-content; */
+    display: flex;
+}
+
+.container__downloads a {
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin-inline: 0.5rem;
+}
+
+.container__downloads i {
+    text-decoration: none;
+    color: rgba(154,225,255,1);
+    display: block;
+    font-size: 2rem;
+    transition: color 0.2s ease-in-out;
+    padding: 0 2px; /* for mobile, increasing the target area  */
+}
+
+.container__downloads i:hover {
+    color: rgb(255, 115, 115);
+}
+
+.container__downloads p {
+    font-weight: 600;
 }
 
     /* Primary button */
@@ -451,6 +518,37 @@ button {
         margin-top: 1rem;
     }
 
+    /* Portfolio */
+    .container__portfolio {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container__portfolio__content {
+        display: flex;
+        flex-direction: row;
+        max-width: 1440px;
+    }
+
+    .portfolio__card {
+        width: 400px;
+        height: fit-content;
+        margin-inline: 1rem;
+        padding: 1rem;
+    }
+
+    .portfolio__card h3 {
+        font-size: 2rem;
+    }
+
+    .portfolio__card p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
     /* Complete Song Services */
     .container__song-services {
         width: 100%;
@@ -518,6 +616,10 @@ button {
         margin-left: 0;
     }
 
+    .container__downloads a:first-child {
+        margin-left: 0;
+    }
+
 }
 
 @media (min-width: 1300px) {
@@ -556,7 +658,7 @@ body::-webkit-scrollbar {
     background: #000;
     position: relative;
   }
-  .gradient-border:nth-child(2) {
+  .gradient-background {
     background: transparent;
     color: #000;
     text-shadow: 8px 8px 2px rgba(0, 0, 0, 0.1);
@@ -721,6 +823,14 @@ body::-webkit-scrollbar {
         margin-block: 1rem;
     }
 
+    /* Portfolio */
+    .container__portfolio {
+        margin-block: 5rem;
+    }
+    .portfolio__card {
+        margin-block: 1rem;
+    }
+
     /* Song Services */
     .container__song-services__content {
         flex-direction: column;
@@ -807,5 +917,13 @@ body::-webkit-scrollbar {
         justify-content: center;
         align-items: center;
     }
+    .container__downloads {
+        justify-content: center;
+        align-items: center;
+    }
 
+}
+
+.portfolio__card p:nth-of-type(2){
+    margin-top: -0.5rem;
 }
