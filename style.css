@@ -497,3 +497,46 @@ body::-webkit-scrollbar {
     opacity: 0;
     pointer-events: none;
 }
+
+    /* 404 */
+    .container__404 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-not-found {
+        background-image: radial-gradient(circle, rgba(255,255,255,0) 10%, rgba(0,0,0,1) 80%), url("assets/angelo.jpg");
+        background-color: #000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease;
+    }
+    
+    .page-not-found__logo {
+        height: 300px;
+        animation: animated404logo 30s linear infinite;
+    }
+    
+    @keyframes animated404logo {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .page-not-found-finished {
+        opacity: 0;
+        pointer-events: none;
+    }
