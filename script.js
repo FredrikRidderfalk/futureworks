@@ -2,17 +2,6 @@
 const tingGanIn = document.querySelector("#tingGanIn");
 let isPlaying = false;
 
-// function togglePlay() {
-//   tingGanIn.volume = 0.4;
-
-//   if ((playing = true)) {
-//     playing = false;
-//     tingGanIn.play();
-//   } else if ((playing = false)) {
-//     tingGanIn.pause();
-//   }
-// }
-
 function togglePlay() {
   tingGanIn.volume = 0;
   const fadeAudio = setInterval(() => {
@@ -25,14 +14,14 @@ function togglePlay() {
 
   tingGanIn.currentTime = 1.5; // this always resets the song back to 1.5s in
   isPlaying ? tingGanIn.pause() : tingGanIn.play();
-}
 
-tingGanIn.onplaying = function () {
-  isPlaying = true;
-};
-tingGanIn.onpause = function () {
-  isPlaying = false;
-};
+  tingGanIn.onplaying = function () {
+    isPlaying = true;
+  };
+  tingGanIn.onpause = function () {
+    isPlaying = false;
+  };
+}
 
 // Airbnb button hover effect
 document.querySelector(".primary-btn").onmousemove = (e) => {
