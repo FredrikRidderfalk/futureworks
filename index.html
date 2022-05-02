@@ -57,6 +57,7 @@
       <img src="assets/futureworks.png" class="preloader__logo" alt="#" />
     </div>
 
+    <!-- Desktop navbar -->
     <nav class="container__navbar">
       <div class="container__navbar__content">
         <div class="container__logo">
@@ -66,14 +67,31 @@
         </div>
         <div class="container__nav-links">
           <ul>
-            <li><a href="https://futureworksstudio.com/beats">Beats</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="https://futureworksstudio.com/news">News</a></li>
+            <li>
+              <a
+                href="https://futureworksstudio.com/beats"
+                class="nav-link__hover"
+                >Beats</a
+              >
+            </li>
+            <li>
+              <a href="portfolio.html" class="nav-link__hover">Portfolio</a>
+            </li>
+            <li><a href="#about" class="nav-link__hover">About</a></li>
+            <li>
+              <a
+                href="https://futureworksstudio.com/news"
+                class="nav-link__hover"
+                >News</a
+              >
+            </li>
           </ul>
         </div>
         <div class="container__contact">
-          <a href="#" class="contact-btn" style="color: #fafafa !important"
+          <a
+            href="mailto:contact@futureworksstudio.com"
+            class="contact-btn"
+            style="color: #fafafa !important"
             >Contact</a
           >
         </div>
@@ -175,7 +193,12 @@
           </article>
         </div>
         <div class="container__primary-btn">
-          <button class="primary-btn"><span>Plan a project</span></button>
+          <button
+            class="primary-btn"
+            onclick="window.location.href='mailto:contact@futureworksstudio.com?subject=Project planning request &body=Hi Nick!'"
+          >
+            <span>Plan a project</span>
+          </button>
         </div>
       </section>
 

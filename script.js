@@ -1,16 +1,30 @@
-// const exploreBtn = document.querySelector(".contact-btn__mobile");
+// Play beats
+const tingGanIn = document.querySelector("#tingGanIn");
+let isPlaying = false;
 
-// exploreBtn.addEventListener("click", () => {
-//   const mobileNav = document.querySelector(".container__navbar__mobile");
-//   open = false;
-//   if (!open) {
-//     open = true;
-//     mobileNav.classList.add("navbar-open");
-//   } else {
-//     mobileNav.classList.remove("navbar-open");
+// function togglePlay() {
+//   tingGanIn.volume = 0.4;
+
+//   if ((playing = true)) {
+//     playing = false;
+//     tingGanIn.play();
+//   } else if ((playing = false)) {
+//     tingGanIn.pause();
 //   }
-// });
+// }
 
+function togglePlay() {
+  isPlaying ? tingGanIn.pause() : tingGanIn.play();
+}
+
+tingGanIn.onplaying = function () {
+  isPlaying = true;
+};
+tingGanIn.onpause = function () {
+  isPlaying = false;
+};
+
+// Airbnb button hover effect
 document.querySelector(".primary-btn").onmousemove = (e) => {
   const x = e.pageX - e.target.offsetLeft;
   const y = e.pageY - e.target.offsetTop;
